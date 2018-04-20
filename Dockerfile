@@ -13,10 +13,7 @@ RUN sed -i -e 's#archive.ubuntu.com#old-releases.ubuntu.com#g' /etc/apt/sources.
 
 
 RUN rm -f /etc/apt/sources.list.d/ubuntu-toolchain-r-ubuntu-test-xenial.list* \
-  && echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64 /" > /etc/apt/sources.list.d/nvidia-ml.list \
   && apt-get update && apt-get install -y --no-install-recommends \
-  libcudnn7=$CUDNN_VERSION-1+cuda9.0 \
-  libcudnn7-dev=$CUDNN_VERSION-1+cuda9.0 \
   autoconf \
   automake \
   bison \
