@@ -12,7 +12,7 @@ RUN sed -i -e 's#archive.ubuntu.com#old-releases.ubuntu.com#g' /etc/apt/sources.
  && echo "done apt-get gcc-7"
 
 
-RUN rm -f /etc/apt/sources.list.d/ubuntu-toolchain-r-ubuntu-test-xenial.list* \
+RUN rm -f /etc/apt/sources.list.d/ubuntu-toolchain-r-ubuntu-test-*.list* \
   && apt-get update && apt-get install -y --no-install-recommends \
   autoconf \
   automake \
